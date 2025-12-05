@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Younivity</title>
+
+  <!-- Alta Font – drop Alta.woff2 in same folder -->
+  <style>
+    @font-face {
+      font-family: "Alta";
+      src: url("Alta.woff2") format("woff2");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Alta", sans-serif;
+      color: white;
+      background: linear-gradient(135deg, #00a8a8, #0e2346);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero {
+      text-align: center;
+      max-width: 900px;
+      padding: 2rem;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin: 0 0 1rem;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      opacity: 0.9;
+    }
+
+    .hero button {
+      background: white;
+      color: #0e2346;
+      border: none;
+      padding: 14px 34px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-family: "Alta", sans-serif;
+    }
+
+    .hero button:hover {
+      background: #d9d9d9;
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero">
+    <h1>Welcome to Younivity</h1>
+    <p>
+      Empowering youth to connect, lead, and create meaningful change through unity, purpose, and community.
+    </p>
+    <button>Learn More</button>
+  </div>
+</body>
+</html>
