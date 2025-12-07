@@ -1,156 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Younivity: Unify your academic life with seamless course management, deadlines, and collaboration tools. Built for students, by students.">
   <title>Younivity - Unify Your Academic Life</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <!-- Favicon and SEO -->
+  <link rel="icon" href="logo.png" type="image/png">
+  <!-- Preload key assets for performance -->
+  <link rel="preload" href="logo.png" as="image">
+  <link rel="preload" href="student-laptop.jpg" as="image">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
+  <!-- Navbar: Sticky, with micro-interactions and gradient logo text -->
+  <header class="navbar" role="banner">
     <div class="container nav-container">
-      <div class="logo">
-        <img src="logo.png" alt="Younivity Logo" class="logo-img"> <!-- YOUR LOGO HERE -->
-        <h2>YOUNIVITY</h2>
+      <div class="logo" aria-label="Younivity Home">
+        <img src="logo.png" alt="Younivity Logo - Interwoven blue gradient symbolizing unity" class="logo-img" loading="eager">
+        <h1 class="logo-text">YOUNIVITY</h1>
       </div>
-      <nav>
+      <nav aria-label="Main Navigation">
         <ul>
-          <li><a href="#">Your Mentor</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Materials</a></li>
-          <li><a href="#">More</a></li>
-          <li><a href="#" class="btn-gradient">Install the App</a></li>
+          <li><a href="#mentor">Your Mentor</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#materials">Materials</a></li>
+          <li><a href="#more">More</a></li>
+          <li><a href="#install" class="btn-gradient">Install the App</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <h1>YOUNIVITY</h1>
-      <p>Unify Your Academic Life</p>
+  <!-- Hero Section: Parallax gradient background, bold typography, animated CTAs -->
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="parallax-bg"></div>
+    <div class="container hero-content">
+      <h2 id="hero-title" class="hero-title">YOUNIVITY</h2>
+      <p class="hero-subtitle">Unify Your Academic Life</p>
       <div class="hero-buttons">
-        <a href="#" class="btn-outline">Learn More</a>
-        <a href="#" class="btn-gradient large">Install the App</a>
+        <a href="#about" class="btn-outline" aria-label="Learn More about Younivity">Learn More</a>
+        <a href="#install" class="btn-gradient pulse" aria-label="Install the Younivity App">Install the App</a>
       </div>
-
-      <div class="features-cards">
-        <div class="card-gradient">Never Miss a Deadline</div>
-        <div class="card-gradient">Stay Organized Effortlessly</div>
-        <div class="card-gradient">Keep All Courses in One Place</div>
-        <div class="card-gradient">Collaborate with Classmates Easily</div>
-      </div>
+    </div>
+    <div class="features-grid container">
+      <article class="feature-card" aria-label="Never Miss a Deadline">
+        <h3>Never Miss a Deadline</h3>
+      </article>
+      <article class="feature-card" aria-label="Stay Organized Effortlessly">
+        <h3>Stay Organized Effortlessly</h3>
+      </article>
+      <article class="feature-card" aria-label="Keep All Courses in One Place">
+        <h3>Keep All Courses in One Place</h3>
+      </article>
+      <article class="feature-card" aria-label="Collaborate with Classmates Easily">
+        <h3>Collaborate with Classmates Easily</h3>
+      </article>
     </div>
   </section>
 
-  <!-- Rest of your sections stay the same (About, How It Works, CTA, Footer) -->
-  <!-- (I'll only show the updated CSS below – HTML structure stays identical) -->
-
-  <!-- About / Built for Students -->
-  <section class="about">
+  <!-- About Section: Immersive image with overlay text, micro-animations -->
+  <section class="about" id="about" aria-labelledby="about-title">
     <div class="container about-grid">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800" alt="Student with laptop" />
+      <figure class="about-image">
+        <img src="student-laptop.jpg" alt="Student smiling while using laptop in a cozy study environment" loading="lazy">
+      </figure>
       <div class="about-text">
-        <h2>BUILT FOR STUDENTS, BY STUDENTS</h2>
-        <p>
-          Younivity was born from real student struggles. We wanted a single place to 
-          manage courses, tasks, and deadlines — without the chaos. Our goal is simple: 
-          help students succeed, stress-free.
-        </p>
-        <a href="#" class="btn-primary">Read More</a>
+        <h2 id="about-title" class="section-title">Built for Students, by Students</h2>
+        <p>Younivity was born from real student struggles. We wanted a single place to manage courses, tasks, and deadlines—without the chaos. Our goal is simple: help students succeed, stress-free.</p>
+        <a href="#more" class="btn-gradient">Read More</a>
       </div>
     </div>
   </section>
 
-  <!-- How It Works -->
-  <section class="how-it-works">
+  <!-- How It Works: Data visualization style cards with hover animations -->
+  <section class="how-it-works" id="how" aria-labelledby="how-title">
     <div class="container">
-      <h2 class="section-title">HOW IT WORKS</h2>
-      <div class="steps">
-        <div class="step">
+      <h2 id="how-title" class="section-title">Our Services</h2>
+      <div class="steps-grid">
+        <article class="step-card" aria-label="Step 1: Add Your Courses">
           <span class="step-number">1</span>
           <h3>Add Your Courses</h3>
           <p>Younivity connects to Canvas and Learning Suite.</p>
           <a href="#" class="btn-outline">More Info</a>
-        </div>
-        <div class="step">
+        </article>
+        <article class="step-card" aria-label="Step 2: Track Assignments">
           <span class="step-number">2</span>
           <h3>Track Assignments</h3>
           <p>Upcoming deadlines always visible.</p>
           <a href="#" class="btn-outline">More Info</a>
-        </div>
-        <div class="step">
+        </article>
+        <article class="step-card" aria-label="Step 3: Connect & Succeed">
           <span class="step-number">3</span>
           <h3>Connect & Succeed</h3>
           <p>Chat with classmates and organize study sessions.</p>
           <a href="#" class="btn-outline">More Info</a>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta">
+  <!-- CTA Section: Bold typography, gradient overlay, 3D tilt effect -->
+  <section class="cta" id="cta" aria-labelledby="cta-title">
     <div class="container cta-grid">
       <div class="cta-text">
-        <h2>TAKE CONTROL OF YOUR SEMESTER TODAY</h2>
-        <a href="#" class="btn-primary large">Download Younivity</a>
+        <h2 id="cta-title" class="section-title">Take Control of Your Semester Today</h2>
+        <a href="#install" class="btn-gradient large pulse">Download Younivity</a>
       </div>
-      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800" alt="Classroom" />
+      <figure class="cta-image">
+        <img src="classroom.jpg" alt="Diverse group of students engaged in a classroom discussion" loading="lazy">
+      </figure>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <!-- Footer: Structured for SEO, with social links and form -->
+  <footer class="footer" role="contentinfo">
     <div class="container footer-grid">
-      <div class="footer-contact">
-        <h4>Contact</h4>
-        <p>500 Terry Francine Street<br>San Francisco, CA 94158</p>
+      <section class="footer-contact" aria-labelledby="contact-title">
+        <h3 id="contact-title">Contact</h3>
+        <address>
+          500 Terry Francine Street<br>
+          San Francisco, CA 94158
+        </address>
         <p>info@mysite.com<br>123-456-7890</p>
-        <a href="#" class="btn-primary">Get a Quote</a>
-      </div>
-
-      <div class="footer-newsletter">
-        <h4>Be in the Know</h4>
-        <p>Subscribe to get updates about new features and tips for academic success.</p>
-        <form>
-          <input type="email" placeholder="Enter your email" />
-          <button type="submit">Subscribe</button>
+        <a href="#quote" class="btn-gradient">Get a Quote</a>
+      </section>
+      <section class="footer-newsletter" aria-labelledby="newsletter-title">
+        <h3 id="newsletter-title">Be in the Know</h3>
+        <p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>
+        <form aria-label="Newsletter Subscription">
+          <input type="email" placeholder="Enter your email" required aria-required="true">
+          <button type="submit" class="btn-gradient">Subscribe</button>
         </form>
-      </div>
-
-      <div class="footer-links">
-        <h4>Menu</h4>
+      </section>
+      <nav class="footer-menu" aria-labelledby="menu-title">
+        <h3 id="menu-title">Menu</h3>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Materials</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">FAQ</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#materials">Materials</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
-      </div>
-
-      <div class="footer-social">
-        <h4>Follow Us on</h4>
+      </nav>
+      <section class="footer-social" aria-labelledby="social-title">
+        <h3 id="social-title">Follow Us on</h3>
         <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">Twitter</a></li>
+          <li><a href="https://facebook.com" aria-label="Follow on Facebook">Facebook</a></li>
+          <li><a href="https://linkedin.com" aria-label="Follow on LinkedIn">LinkedIn</a></li>
+          <li><a href="https://twitter.com" aria-label="Follow on Twitter">Twitter</a></li>
         </ul>
-      </div>
+      </section>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Younivity. All rights reserved.</p>
+      <p>© 2025 Younivity. Powered and secured by innovation.</p>
     </div>
   </footer>
 
-  <!-- Chat Button (fixed) -->
-  <a href="#" class="chat-btn">Let's Chat!</a>
+  <!-- Floating Chat Button: With pulse animation and accessibility -->
+  <a href="#chat" class="chat-btn pulse" aria-label="Open Live Chat">Let's Chat!</a>
+
 </body>
 </html>
